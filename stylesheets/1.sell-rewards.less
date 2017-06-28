@@ -3,10 +3,13 @@
     p[id*="FAQ"] {
         margin-bottom: 0.2em;
         overflow: hidden;
-        height: 28px;
+        height: 100% !important;
         cursor: pointer;
         border-bottom: 4px solid white;
         transition: background 0.3s 0.3s, padding 0.2s, border 0.3s 0.3s;
+        i{
+            display:none;
+        }
         &:hover {
             b {
                 color: @red;
@@ -19,6 +22,10 @@
             line-height: 1.6em;
             border-radius: 4px;
             border-bottom: 4px solid @red;
+            i{
+                display:block;
+                font-style:normal!important;
+            }
             &:hover {
                 b {
                     border-bottom: none;
