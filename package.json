@@ -43,6 +43,6 @@
     "uglify-js": "git+https://github.com/mishoo/UglifyJS2.git#harmony"
   },
   "dependencies": {
-    "scrollmap": "^1.6.9"
+    "scrollmap": "^1.7.1"
   }
 }
