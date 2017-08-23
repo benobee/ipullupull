@@ -4,7 +4,7 @@ import Scrollmap from 'scrollmap';
     const Site = {
         init() {
             this.animation();
-            this.faq("#collection-59419b79d2b8575be217f9bf, #collection-59419c0c59cc6850cec56bff", "#collection-5980b200f14aa1e9bb9c8c2a", "#collection-5980bec51e5b6c82ca20cdc4");
+            this.faq("#collection-59419b79d2b8575be217f9bf, #collection-59419c0c59cc6850cec56bff, #collection-5980b200f14aa1e9bb9c8c2a, #collection-5980bec51e5b6c82ca20cdc4");
         },
         currentPage(id) {
             const page = document.querySelector(id);
