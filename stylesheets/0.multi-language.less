@@ -1,0 +1,114 @@
+.sqs-edit-mode-active,
+.sqs-edit-mode {
+    .image-block-v2 {
+        * {
+            opacity: 1 !important;
+            transform: none !important;
+        }
+    }
+}
+
+/* Global Classes */
+
+.visible-link {
+    display: inline-block;
+    opacity: 1;
+    visibility: visible;
+    position: static;
+}
+
+.hidden-link {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+}
+
+
+/* Lanuage UI */
+
+.language-selection {
+    background: rgba(10, 10, 10, 0.85);
+    border-top: 4px solid #141414;
+    border-bottom: 4px solid #141414;
+    .list {
+        display: flex;
+        justify-content: flex-end;
+        .item {
+            font-size: 0.7em;
+            text-transform: uppercase;
+            font-weight: 500;
+            margin-right: 0.3em;
+            color: grey;
+            a {
+                padding: 0.1em 1em;
+                &.active {
+                    background: @red;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+
+
+/* Language choices */
+
+.Header,
+.Mobile-overlay-menu-main {
+    a {
+        &[data-page-title*="spanish"] {
+            .hidden-link;
+        }
+    }
+}
+
+.Footer-blocks--bottom {
+    display: none;
+}
+
+
+/* Spanish Choice */
+
+body[data-page-title*="spanish"] {
+    .language-selection {
+        a[data-language*="spanish"] {
+            background: @red;
+            color: white;
+        }
+    }
+    .Mobile-overlay-menu-main {
+        a {
+            &[data-page-title*="spanish"] {
+                .visible-link;
+            }
+            &:not([data-page-title*="spanish"]) {
+                .hidden-link;
+            }
+        }
+    }
+    .Header {
+        .Header-nav a {
+            &[data-page-title*="spanish"] {
+                .visible-link;
+            }
+            &:not([data-page-title*="spanish"]) {
+                .hidden-link;
+            }
+        }
+    }
+    .Footer-blocks--top,
+    .Footer-blocks--middle {
+        display: none;
+    }
+    .Footer-blocks--bottom {
+        display: block;
+    }
+}
+
+.Header-nav a {
+    &:not([data-page-title*="spanish"]) {
+        .visible-link;
+    }
+}
